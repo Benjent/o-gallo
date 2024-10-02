@@ -1,0 +1,140 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jpg";
+---
+
+<Layout title="Ferme ô Gallo | Maraîchage biologique">
+  <main class="p-8">
+    <header
+      class="flex flex-col lg:flex-row justify-center items-center lg:items-end gap-24 text-center mb-24 mt-12"
+    >
+      <hgroup>
+        <h1 class="text-7xl font-black">Ferme <br /> ô Gallo</h1><p
+          class="text-4xl"
+        >
+          Maraîchage biologique
+        </p>
+      </hgroup>
+      <div class="flex items-center gap-5 lg:gap-8">
+        <div>
+          <Image
+            src={logoAgricultureBiologique}
+            alt="Logo de l'étiquette Agriculture Biologique."
+            height={160}
+          />
+        </div>
+        <address class="not-italic text-justify [text-align-last:justify]">
+          <span class="text-xl lg:text-2xl">
+            <span class="text-agro-dark">Ferme ô Gallo</span> ⸱ <span
+              class="text-white">Kergus</span
+            >
+          </span>
+          <br />
+          <span class="text-xl lg:text-2xl">22110 Plouguernével</span><br />
+          <span class="text-2xl lg:text-3xl">06 03 93 63 30</span><br />
+          <span class="text-lg lg:text-xl">charlotte.boco@gmail.com</span><br />
+          <span class="text-base [text-align-last:center]"
+            ><a
+              href="https://www.kbtp.fr/index.php?route=product/manufacturer/info&manufacturer_id=67"
+              target="_blank"
+              class="underline underline-offset-2">www.kbtp.fr</a
+            ></span
+          >
+        </address>
+      </div>
+    </header>
+
+    <div
+      class="flex flex-col lg:flex-row gap-24 lg:gap-8 lg:items-center justify-center mb-16 max-w-screen-2xl"
+    >
+      <div class="lg:w-2/3 lg:text-right lg:px-6 xl:px-24">
+        <p class="text-xl lg:text-2xl mb-10">
+          La <span class="text-agro-dark">Ferme ô Gallo</span> est une <strong
+            class="text-white font-normal">ferme maraîchère</strong
+          > conduite en
+          <strong class="text-white font-normal">Agriculture Biologique</strong>
+          de 4,7ha avec 900m² de tunnels froids et environ 7000m² de cultivé en plein
+          champ. Nous sommes situés au <span class="text-agro-dark"
+            >lieu-dit Kergus à Plouguernével</span
+          >. Nous vous proposons une gamme d'une quarantaine de légumes qui
+          fluctue au fil des saisons.
+        </p>
+        <p class="text-xl lg:text-3xl font-semibold">
+          Au plaisir de vous rencontrer&nbsp;!
+        </p>
+        <small class="text-base lg:text-xl italic">Charlotte et Geoffrey</small>
+      </div>
+
+      <div class="flex-1 lg:p-8 flex flex-col lg:flex-row gap-8 items-center">
+        <h2
+          class="uppercase tracking-wider text-3xl font-black lg:[writing-mode:sideways-lr]"
+        >
+          Où trouver nos légumes&nbsp;?
+        </h2>
+        <ul
+          class="text-left text-lg lg:text-xl leading-tight lg:leading-snug flex flex-col gap-8"
+        >
+          <li class="">
+            <strong
+              ><span class="text-white"
+                >Au marché de <span class="text-agro-dark">Rostrenen</span
+                ></span
+              ></strong
+            >
+            <br />
+            <span class="font-bold">le mardi matin</span>
+          </li>
+          <li class="">
+            <strong
+              ><span class="text-white"
+                >À l'AMAP Karaez (<span class="text-agro-dark">Carhaix</span
+                >)</span
+              ></strong
+            >
+            <br />
+            <span class="font-bold">sur commande le mardi soir</span>
+            <br />
+            de 17h15 à 18h30
+          </li>
+          <li class="">
+            <strong
+              ><span class="text-white"
+                >Au marché du <span class="text-agro-dark"
+                  >Buis Sonnant (Kerleo 22110 Plouguernével)</span
+                ></span
+              ></strong
+            >
+            <br />
+            <span class="font-bold">le vendredi après-midi</span>
+            <br />
+            de 16h à 18h30
+
+            <li class="">
+              <strong
+                ><span class="text-white">Sur commande en ligne</span></strong
+              >
+              <br />
+              <span class="font-bold"
+                >sur <a
+                  href="https://www.kbtp.fr/index.php?route=product/manufacturer/info&manufacturer_id=67"
+                  target="_blank"
+                  class="underline decoration-2">www.kbtp.fr</a
+                ></span
+              >
+            </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="flex gap-4 justify-center">
+      <span
+        >&copy;{new Date().getFullYear()}
+        <span class="text-agro-dark">Ferme ô Gallo</span></span
+      >
+      <span>⸱</span>
+      <span>Piksail</span>
+    </footer>
+  </main>
+</Layout>
