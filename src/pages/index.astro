@@ -2,15 +2,17 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jpg";
+import logoOGallo from "../assets/logos/o-gallo.png";
 ---
 
-<Layout title="Ferme ô Gallo | Maraîchage biologique">
+<Layout title="Ferme ô Gallo | Maraîchage biologique à Plouguernével 22110">
   <main class="p-8">
     <header
-      class="flex flex-col lg:flex-row justify-center items-center lg:items-end gap-24 text-center mb-24 mt-12"
+      class="flex flex-col lg:flex-row justify-center items-center lg:gap-24 text-center mb-12 lg:mb-0"
     >
-      <hgroup>
-        <h1 class="text-7xl font-black">Ferme <br /> ô Gallo</h1><p
+      <Image src={logoOGallo} alt="Logo de la Ferme O Gallo." height={300} />
+      <hgroup class="sr-only">
+        <h1 class="text-7xl font-black font-display">Ferme <br /> ô Gallo</h1><p
           class="text-4xl"
         >
           Maraîchage biologique
@@ -31,7 +33,9 @@ import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jp
             >
           </span>
           <br />
-          <span class="text-xl lg:text-2xl">22110 Plouguernével</span><br />
+          <span class="text-xl lg:text-2xl"
+            >22110 <span class="tracking-wider">Plouguernével</span></span
+          ><br />
           <span class="text-2xl lg:text-3xl">06 03 93 63 30</span><br />
           <span class="text-lg lg:text-xl">charlotte.boco@gmail.com</span><br />
           <span class="text-base [text-align-last:center]"
@@ -48,7 +52,9 @@ import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jp
     <div
       class="flex flex-col lg:flex-row gap-24 lg:gap-8 lg:items-center justify-center mb-16 max-w-screen-2xl"
     >
-      <div class="lg:w-2/3 lg:text-right lg:px-6 xl:px-24">
+      <div
+        class="max-w-[485px] mx-auto mt-12 lg:mt-0 lg:max-w-none lg:w-2/3 lg:text-right lg:px-6 xl:px-24"
+      >
         <p class="text-xl lg:text-2xl mb-10">
           La <span class="text-agro-dark">Ferme ô Gallo</span> est une <strong
             class="text-white font-normal">ferme maraîchère</strong
@@ -60,7 +66,7 @@ import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jp
           >. Nous vous proposons une gamme d'une quarantaine de légumes qui
           fluctue au fil des saisons.
         </p>
-        <p class="text-xl lg:text-3xl font-semibold">
+        <p class="text-xl lg:text-3xl font-display">
           Au plaisir de vous rencontrer&nbsp;!
         </p>
         <small class="text-base lg:text-xl italic">Charlotte et Geoffrey</small>
@@ -68,9 +74,9 @@ import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jp
 
       <div class="flex-1 lg:p-8 flex flex-col lg:flex-row gap-8 items-center">
         <h2
-          class="uppercase tracking-wider text-3xl font-black lg:[writing-mode:sideways-lr]"
+          class="uppercase tracking-wider text-3xl font-black lg:[writing-mode:sideways-lr] font-display"
         >
-          Où trouver nos légumes&nbsp;?
+          Ou trouver nos legumes&nbsp;?
         </h2>
         <ul
           class="text-left text-lg lg:text-xl leading-tight lg:leading-snug flex flex-col gap-8"
@@ -131,10 +137,17 @@ import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jp
     <footer class="flex gap-4 justify-center">
       <span
         >&copy;{new Date().getFullYear()}
-        <span class="text-agro-dark">Ferme ô Gallo</span></span
+        <span class="text-agro-dark font-display text-xl">Ferme O Gallo</span
+        ></span
       >
       <span>⸱</span>
-      <span>Piksail</span>
+      <span class="font-display text-xl"
+        ><a
+          href="https://piksail.fr/"
+          class="underline decoration-2 underline-offset-2 hover:no-underline"
+          >Piksail</a
+        ></span
+      >
     </footer>
   </main>
 </Layout>

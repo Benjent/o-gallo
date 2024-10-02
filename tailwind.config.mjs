@@ -12,7 +12,11 @@ export default {
 					dark: "#ece58d",
 					light: "#f7f4d5",
 				},
-			}
+			},
+			fontFamily: {
+                'body' : ['"Neue Regrade"', 'sans-serif'],
+                'display' : ['Birdgo', 'sans-serif'],
+            }
 		},
 	},
 	plugins: [],
