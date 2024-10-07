@@ -1,16 +1,32 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.jpg";
+import logoAgricultureBiologique from "../assets/logos/agriculture-biologique.png";
 import logoOGallo from "../assets/logos/o-gallo.png";
 ---
 
 <Layout title="Ferme ô Gallo | Maraîchage biologique à Plouguernével 22110">
-  <main class="p-8">
+  <main class="p-8 relative">
+    <div class="hidden lg:block lg:fixed top-4 lg:top-8 right-4 lg:right-8">
+      <Image
+        class=""
+        src={logoAgricultureBiologique}
+        alt="Logo de l'étiquette Agriculture Biologique."
+        height={80}
+      />
+    </div>
     <header
-      class="flex flex-col lg:flex-row justify-center items-center lg:gap-24 text-center mb-12 lg:mb-0"
+      class="flex flex-col lg:flex-row justify-center items-center text-center mb-12 lg:mb-0"
     >
-      <Image src={logoOGallo} alt="Logo de la Ferme O Gallo." height={300} />
+      <div class="relative">
+        <Image src={logoOGallo} alt="Logo de la Ferme O Gallo." height={300} />
+        <Image
+          class="absolute lg:hidden -top-4 -right-4 lg:top-0 lg:right-0"
+          src={logoAgricultureBiologique}
+          alt="Logo de l'étiquette Agriculture Biologique."
+          height={60}
+        />
+      </div>
       <hgroup class="sr-only">
         <h1 class="text-7xl font-black font-display">Ferme <br /> ô Gallo</h1><p
           class="text-4xl"
@@ -18,14 +34,14 @@ import logoOGallo from "../assets/logos/o-gallo.png";
           Maraîchage biologique
         </p>
       </hgroup>
-      <div class="flex items-center gap-5 lg:gap-8">
-        <div>
+      <div class="flex items-center">
+        <!-- <div>
           <Image
             src={logoAgricultureBiologique}
             alt="Logo de l'étiquette Agriculture Biologique."
             height={160}
           />
-        </div>
+        </div> -->
         <address
           class="not-italic text-justify font-medium [text-align-last:justify]"
         >
