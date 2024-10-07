@@ -7,7 +7,7 @@ export default {
 				banner: "url('/src/assets/images/banner.jpg')",
 			},
 			colors: {
-				primary: "#ed7681",
+				primary: "#d88f96",
 				agro: {
 					dark: "#ece58d",
 					light: "#f7f4d5",
