@@ -7,14 +7,14 @@ export default {
 				banner: "url('/src/assets/images/banner.jpg')",
 			},
 			colors: {
-				primary: "#d88f96",
+				primary: "#d8928f",
 				agro: {
 					dark: "#ece58d",
 					light: "#f7f4d5",
 				},
 			},
 			fontFamily: {
-                'body' : ['"Neue Regrade"', 'sans-serif'],
+                'body' : ['"Overpass"', 'sans-serif'],
                 'display' : ['Birdgo', 'sans-serif'],
             }
 		},
